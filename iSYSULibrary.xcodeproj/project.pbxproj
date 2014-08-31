@@ -76,8 +76,10 @@
 			isa = PBXGroup;
 			children = (
 				4236897419B3206700CDC7E0 /* AppDelegate.swift */,
-				4236897619B3206700CDC7E0 /* ViewController.swift */,
 				4236897819B3206700CDC7E0 /* Main.storyboard */,
+				42C246B319B32DAC00648CFC /* Model */,
+				42C246B219B32DA800648CFC /* View */,
+				42C246B119B32DA100648CFC /* Controller */,
 				4236897B19B3206700CDC7E0 /* Images.xcassets */,
 				4236897219B3206700CDC7E0 /* Supporting Files */,
 			);
@@ -107,6 +109,28 @@
 				4236898619B3206700CDC7E0 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		42C246B119B32DA100648CFC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4236897619B3206700CDC7E0 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		42C246B219B32DA800648CFC /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		42C246B319B32DAC00648CFC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,6 +354,7 @@
 				INFOPLIST_FILE = iSYSULibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -341,6 +366,7 @@
 				INFOPLIST_FILE = iSYSULibrary/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -397,6 +423,7 @@
 				4236898D19B3206700CDC7E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4236898E19B3206700CDC7E0 /* Build configuration list for PBXNativeTarget "iSYSULibraryTests" */ = {
 			isa = XCConfigurationList;
@@ -405,6 +432,7 @@
 				4236899019B3206700CDC7E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
