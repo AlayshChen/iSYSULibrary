@@ -22,11 +22,8 @@ class SLLoginViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
     
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
-    }
-    
     func configureAppearence() {
+        UIApplication.sharedApplication().statusBarStyle = UIStatusBarStyle.LightContent
         usernameField.alpha = 0.0
         passwordField.alpha = 0.0
         loginButton.alpha = 0.0
