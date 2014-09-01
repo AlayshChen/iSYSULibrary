@@ -8,10 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4236897519B3206700CDC7E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236897419B3206700CDC7E0 /* AppDelegate.swift */; };
-		4236897719B3206700CDC7E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236897619B3206700CDC7E0 /* ViewController.swift */; };
+		4236897719B3206700CDC7E0 /* SLLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236897619B3206700CDC7E0 /* SLLoginViewController.swift */; };
 		4236897A19B3206700CDC7E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4236897819B3206700CDC7E0 /* Main.storyboard */; };
 		4236897C19B3206700CDC7E0 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4236897B19B3206700CDC7E0 /* Images.xcassets */; };
 		4236898819B3206700CDC7E0 /* iSYSULibraryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4236898719B3206700CDC7E0 /* iSYSULibraryTests.swift */; };
+		42C246B619B330EE00648CFC /* UIColor+ApplicationSpecific.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42C246B519B330EE00648CFC /* UIColor+ApplicationSpecific.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,12 +29,13 @@
 		4236896F19B3206700CDC7E0 /* iSYSULibrary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iSYSULibrary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4236897319B3206700CDC7E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4236897419B3206700CDC7E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4236897619B3206700CDC7E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		4236897619B3206700CDC7E0 /* SLLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SLLoginViewController.swift; sourceTree = "<group>"; };
 		4236897919B3206700CDC7E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4236897B19B3206700CDC7E0 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4236898119B3206700CDC7E0 /* iSYSULibraryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iSYSULibraryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4236898619B3206700CDC7E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4236898719B3206700CDC7E0 /* iSYSULibraryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iSYSULibraryTests.swift; sourceTree = "<group>"; };
+		42C246B519B330EE00648CFC /* UIColor+ApplicationSpecific.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+ApplicationSpecific.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				42C246B319B32DAC00648CFC /* Model */,
 				42C246B219B32DA800648CFC /* View */,
 				42C246B119B32DA100648CFC /* Controller */,
+				42C246B419B330CB00648CFC /* Extension */,
 				4236897B19B3206700CDC7E0 /* Images.xcassets */,
 				4236897219B3206700CDC7E0 /* Supporting Files */,
 			);
@@ -114,7 +117,7 @@
 		42C246B119B32DA100648CFC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4236897619B3206700CDC7E0 /* ViewController.swift */,
+				4236897619B3206700CDC7E0 /* SLLoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -131,6 +134,14 @@
 			children = (
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		42C246B419B330CB00648CFC /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				42C246B519B330EE00648CFC /* UIColor+ApplicationSpecific.swift */,
+			);
+			name = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,8 +243,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4236897719B3206700CDC7E0 /* ViewController.swift in Sources */,
+				4236897719B3206700CDC7E0 /* SLLoginViewController.swift in Sources */,
 				4236897519B3206700CDC7E0 /* AppDelegate.swift in Sources */,
+				42C246B619B330EE00648CFC /* UIColor+ApplicationSpecific.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
