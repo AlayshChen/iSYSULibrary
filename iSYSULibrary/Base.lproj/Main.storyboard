@@ -1,12 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6206.8" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="ITV-6C-bVk">
     <dependencies>
         <deployment defaultVersion="1808" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7026.1"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Login View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="aJJ-An-UlW">
+            <objects>
+                <navigationController id="ITV-6C-bVk" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="1Bg-Gk-l8z">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.25490196079999999" green="0.81176470590000005" blue="0.14117647059999999" alpha="1" colorSpace="deviceRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="aUG-Xe-x9a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7ft-Lz-lLR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-768" y="91"/>
+        </scene>
+        <!--登录-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="SLLoginViewController" customModule="iSYSULibrary" customModuleProvider="target" sceneMemberID="viewController">
@@ -54,7 +74,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.25490196079999999" green="0.81176470590000005" blue="0.14117647059999999" alpha="1" colorSpace="deviceRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-Italic" family="Avenir Next" pointSize="17"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="密码" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oe0-Vz-zHg">
                                 <rect key="frame" x="36" y="216" width="528" height="35"/>
@@ -105,7 +125,7 @@
                             <constraint firstItem="XLS-Fm-EG4" firstAttribute="leading" secondItem="lZs-UC-LCe" secondAttribute="leading" id="8jg-Cp-SS1"/>
                             <constraint firstAttribute="centerX" secondItem="lmR-J1-Faa" secondAttribute="centerX" id="A20-2M-cDw"/>
                             <constraint firstItem="5sQ-dJ-N0t" firstAttribute="bottom" secondItem="lmR-J1-Faa" secondAttribute="bottom" constant="1" id="AKK-er-agp"/>
-                            <constraint firstItem="r0R-Pn-moW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="80" id="BcZ-D2-ch8"/>
+                            <constraint firstItem="r0R-Pn-moW" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="36" id="BcZ-D2-ch8"/>
                             <constraint firstItem="lZs-UC-LCe" firstAttribute="top" secondItem="Pg2-sv-SBe" secondAttribute="bottom" id="CYz-Ag-NMm"/>
                             <constraint firstItem="BCf-mu-ksR" firstAttribute="leading" secondItem="lZs-UC-LCe" secondAttribute="leading" constant="20" id="Fb7-3f-ADN"/>
                             <constraint firstItem="nWc-bL-Bky" firstAttribute="top" secondItem="lZs-UC-LCe" secondAttribute="bottom" id="LZD-gt-1WD"/>
@@ -131,6 +151,7 @@
                             <outletCollection property="gestureRecognizers" destination="TOh-xU-N1P" appends="YES" id="WLL-Nu-CcH"/>
                         </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="登录" id="rUb-Sk-cd9"/>
                     <nil key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="loginButton" destination="BCf-mu-ksR" id="Kge-gu-5K9"/>
