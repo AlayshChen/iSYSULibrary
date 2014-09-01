@@ -9,8 +9,7 @@
 import UIKit
 
 class SLLoginViewController: UIViewController {
-                            
-    @IBOutlet weak var imageView: UIImageView!
+    
     @IBOutlet weak var usernameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
@@ -22,17 +21,13 @@ class SLLoginViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
-        return UIStatusBarStyle.LightContent
-    }
     
     func configureAppearence() {
         usernameField.alpha = 0.0
         passwordField.alpha = 0.0
         loginButton.alpha = 0.0
-        usernameField.textColor = UIColor.whiteColor()
-        passwordField.textColor = UIColor.whiteColor()
+        usernameField.textColor = UIColor.lightGrayColor()
+        passwordField.textColor = UIColor.lightGrayColor()
         UIView.animateWithDuration(0.7, delay: 0.0, options: UIViewAnimationOptions.CurveEaseIn, animations: { () -> Void in
             self.usernameField.alpha = 1.0
             self.passwordField.alpha = 1.0
@@ -40,22 +35,21 @@ class SLLoginViewController: UIViewController {
         }, completion: nil)
         usernameField.addTarget(self, action: "textFieldDidChange", forControlEvents: UIControlEvents.EditingChanged)
         passwordField.addTarget(self, action: "textFieldDidChange", forControlEvents: UIControlEvents.EditingChanged)
-        var visualEffectView = UIVisualEffectView(effect: UIBlurEffect(style: UIBlurEffectStyle.Light))
-        visualEffectView.frame = view.frame
-        visualEffectView.alpha = 0.8
-        imageView.image = UIImage(named: "background")
-        imageView.addSubview(visualEffectView)
         textFieldDidChange()
     }
     
     
     func textFieldDidChange() {
         if usernameField.text.isEmpty || passwordField.text.isEmpty {
-            loginButton.backgroundColor = UIColor.lightGrayColor()
             loginButton.enabled = false
+            UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseOut, animations: {
+                self.loginButton.backgroundColor = UIColor.lightGrayColor().colorWithAlphaComponent(0.5)
+                }, completion: nil)
         }
         else {
-            loginButton.backgroundColor = UIColor.applicationGreenColor()
+            UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.CurveEaseIn, animations: {
+                self.loginButton.backgroundColor = UIColor.applicationGreenColor()
+                }, completion: nil)
             loginButton.enabled = true
         }
     }
@@ -68,6 +62,7 @@ class SLLoginViewController: UIViewController {
     @IBAction func loginButtonClicked(sender: AnyObject) {
         usernameField.resignFirstResponder()
         passwordField.resignFirstResponder()
+        performSegueWithIdentifier("didLogIn", sender: self)
     }
 }
 
